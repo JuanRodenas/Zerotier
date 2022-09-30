@@ -1,6 +1,13 @@
 # zerotier-one-docker
 
 Docker container to run ZeroTier One using Docker.
+<p align="center">
+        <img src="https://github.com/JuanRodenas/Zerotier/blob/main/zerotier.jpg" alt="zerotier" width="800" height="400"/>
+    </a>
+    <br>
+    <strong>ZeroTier es una de las empresas líderes en SDN</strong>
+</p>
+<!-- markdownlint-enable MD033 -->
 
 
 ## Instalación desde Respositorios
