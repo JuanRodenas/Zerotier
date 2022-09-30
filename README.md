@@ -29,31 +29,13 @@ sudo zerotier-cli leave NETWORK-ID
 ```
 
 ## Instalación en Docker
-#### Docker para Raspberry y ARM
+#### Docker-compose
 ```bash
 version: '3.3'
 
 services:
   zerotier:
-    image: ugeek/zerotier:arm
-    container_name: zerotier
-    devices:
-      - /dev/net/tun
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-    volumes:
-      - $HOME/docker/zerotier:/var/lib/zerotier-one
-```
-
-#### Docker para amd64
-```bash
-version: '3.3'
-
-services:
-  zerotier:
-    image: ugeek/zerotier:arm
+    image: zerotier/zerotier
     container_name: zerotier
     devices:
       - /dev/net/tun
@@ -83,5 +65,5 @@ sudo zerotier-cli info
 ## Inspiration
 
 Fuente
-    [Forked](https://github.com/docker-projects/docker-zerotier)
-    [SEE](https://github.com/zyclonite/zerotier-docker)
+    [Github](https://github.com/zerotier/ZeroTierOne)
+    [Docker HUB](https://hub.docker.com/r/zerotier/zerotier)
