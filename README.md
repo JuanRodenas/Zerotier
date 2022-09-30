@@ -42,8 +42,10 @@ version: '3.3'
 
 services:
   zerotier:
-    image: zerotier/zerotier
+    image: zerotier/zerotier:latest
     container_name: zerotier
+    security_opt:
+      - no-new-privileges
     devices:
       - /dev/net/tun
     network_mode: host
@@ -51,7 +53,12 @@ services:
       - NET_ADMIN
       - SYS_ADMIN
     volumes:
-      - $HOME/docker/zerotier:/var/lib/zerotier-one
+      - $HOME/docker/zerotier/data:/var/lib/zerotier-one
+    ports:
+      - 9993:9993
+    environment:
+      - PUID=1000
+      - PGID=1000
 ```
 
 Añadir y Conectarnos a tu Network ID
