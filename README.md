@@ -74,8 +74,13 @@ docker exec -it zerotier-one zerotier-cli join NETWORK-ID
 ```
 Información
 ```bash
-sudo zerotier-cli info
+zerotier-cli info
 ```
+Desconectarnos del Network ID
+```bash
+zerotier-cli leave NETWORK-ID
+```
+
 ## Inspiration
 
 Fuente
