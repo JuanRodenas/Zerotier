@@ -80,7 +80,43 @@ Desconectarnos del Network ID
 ```bash
 zerotier-cli leave NETWORK-ID
 ```
+Configuración:
+```bash
+admin@Ubuntu:~$ sudo zerotier-cli --help
+ZeroTier One version 1.10.1 build 0 (platform 1 arch 4)
+Copyright (c) 2020 ZeroTier, Inc.
+Licensed under the ZeroTier BSL 1.1 (see LICENSE.txt)
+Usage: zerotier-cli [-switches] <command/path> [<args>]
 
+Opciones disponibles:
+  -h - Mostrar esta ayuda
+  -v - Mostrar la versión
+  -j - Mostrar la salida JSON completa sin procesar
+  -D<ruta> - Ruta de inicio de ZeroTier para la autodetección de parámetros
+  -p<puerto> - Puerto HTTP (por defecto: auto)
+  -T<token> - Token de autenticación (por defecto: auto)
+
+Comandos disponibles:
+  info - Mostrar información de estado
+  listpeers - Listar todos los peers
+  peers - Listar todos los peers (más bonito)
+  listnetworks - Listar todas las redes
+  join <identificación de red> - Unirse a una red
+  leave <identificación de red> - Abandonar una red
+  set <id. de red> <configuración> - Establecer una configuración de red
+  get <identificación de red> <configuración> - Obtener una configuración de red
+  listmoons - Listar lunas (conjuntos raíz federados)
+  orbit <world ID> <seed> - Unirse a una luna a través de cualquier raíz miembro
+  deorbit <world ID> - Dejar una luna
+  dump - Volcar la configuración de depuración para el soporte
+
+
+Ajustes disponibles:
+  Las configuraciones a utilizar con [get/set] pueden incluir nombres de propiedades de 
+  la salida JSON de "zerotier-cli -j listnetworks". Además, 
+  (se pueden utilizar ip, ip4, ip6, ip6plane e ip6prefix).Por ejemplo
+  zerotier-cli get <network ID> ip6plane devolverá la dirección 6PLANE asignada a este nodo.
+```
 ## Inspiration
 
 Fuente
